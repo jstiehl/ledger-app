@@ -14,16 +14,20 @@ class Account extends Component {
     return (
       <div className="account-wrapper">
         <h1>{this.state.login ? 'Login' : 'Create New Account'}</h1>
-        <div>
+        <div className="account-item">
           <label>Username</label>
           <input onChange={this._updateInput.bind(this, "username")} />
         </div>
-        <div>
+        <div className="account-item">
           <label>Password</label>
           <input onChange={this._updateInput.bind(this, "password")} />
         </div>
-        <input type="checkBox" onChange={this._createNewAccount.bind(this)} />Create New Account
-        <button onClick={this.actionHandler.bind(this)}>{this.state.login ? 'Login' : 'Create New Account'}</button>
+        <div className="account-item">
+          <input type="checkBox" onChange={this._createNewAccount.bind(this)} />Create New Account
+        </div>
+        <div className="account-item">
+          <button onClick={this.actionHandler.bind(this)}>{this.state.login ? 'Login' : 'Create New Account'}</button>
+        </div>
       </div>
     )
   }

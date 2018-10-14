@@ -34,6 +34,38 @@
 .ledger-container {
   display: grid;
   grid-template-columns: 60% 40%;
+  min-height: 90vh;
+  border-top: 1px solid black;
+}
+
+.logout {
+  min-height: 30px;
+  text-align: right;
+  background-color: #DEEBFF;
+}
+
+.logout button {
+  border-color: #DEEBFF; 
+  background-color: #DEEBFF;
+  color: grey;
+  font-weight: bold;
+  min-height: 30px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.logout button:hover {
+  color: black;
+}
+
+.logout span {
+  position: absolute;
+  left: 25px;
+  padding-top: 7.5px;
+}
+
+.ledger-wrapper {
+  border-right: 1px solid black;
 }
 
 .ledger {
@@ -48,10 +80,75 @@
   text-align: center;
 }
 
+.transaction-item:nth-child(even) {background-color: #DEEBFF}
+
+.transaction-item:hover {
+  background-color: #f5f5f5;
+}
+
+.transaction-item.transaction-header {
+  background-color: #f5f5f5;
+  font-weight: bold;   
+}
+
 .transaction-item__child {
   border: 1px solid blue;
 }
 
-.transaction-item__child.transaction-type {
-  text-align: center;
+.transaction-form {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.transaction-form__item {
+  text-align: left;
+  margin-left: 75px;
+}
+
+.transaction-form__item:nth-child(even) {
+  margin-bottom: 10px;
+}
+
+.transaction-form__item p {
+  text-decoration: underline;
+}
+
+.transaction-form__item input {
+  max-width: 100px;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+.transaction-form__item .instructions {
+  display: block;
+  font-size: 12px;
+}
+
+.account-wrapper {
+  width: 25%;
+  min-height: 500px;
+  min-width: 350px;
+  max-width: 350px;
+  margin:100px auto;
+  border: 1px solid grey;
+  border-radius: 25px;
+}
+
+.account-wrapper h1 {
+  margin-bottom: 75px;
+}
+
+.account-wrapper label {
+  display: block;
+  font-size: 25px;
+}
+
+.account-wrapper .account-item {
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.account-wrapper button {
+  display: block;
+  margin: auto;
 }

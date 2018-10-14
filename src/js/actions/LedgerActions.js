@@ -2,7 +2,6 @@ import request from 'superagent'
 
 const LedgerActions = {
   postTransaction: (accountId, transactionType, transactionAmount) => {
-    console.log(accountId)
     let token
     try {
       token = JSON.parse(window.localStorage.getItem('token')).access_token

@@ -25,19 +25,24 @@ class LedgerContainer extends Component {
   render() {
     if(this.props.accessToken) {
       return (
-        <div className="ledger-container">
-          <div>
-            <Ledger 
-              username={this.props.username}
-              accountNumber={this.props.accountId}
-              currentBalance={this.props.currentBalance}
-              transactionHistory={this.props.transactionHistory}/>
-            <div className="logout">
-              <button onClick={this.props.logoutUser}>Logout</button>
-            </div>
+        <div>
+          <div className="logout">
+            <span>
+              Account Summary
+            </span>
+            <button onClick={this.props.logoutUser}>Logout</button>
           </div>
-          <div>
-            <TransactionsContainer />
+          <div className="ledger-container">
+            <div className="ledger-wrapper">
+              <Ledger 
+                username={this.props.username}
+                accountNumber={this.props.accountId}
+                currentBalance={this.props.currentBalance}
+                transactionHistory={this.props.transactionHistory}/>
+            </div>
+            <div>
+              <TransactionsContainer />
+            </div>
           </div>
         </div>
       )

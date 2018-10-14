@@ -12,11 +12,20 @@ class Transactions extends Component {
   render() {
     return (
       <div>
-          <label>Transaction Amount</label>
-          <p>Please enter amount for your {this.state.transactionType}</p>
-          <input onChange={this._updateInput.bind(this, "transactionAmount")} value={this.state.transactionAmount} placeholder="e.g 500"/>
-          <input type="checkBox" onChange={this._toggleTransactionType.bind(this)} checked={this.state.transactionType === 'withdrawal'}/>Withdrawal
-          <button onClick={this.handleTransaction.bind(this)} disabled={this._checkDisabled()}>Submit</button>
+          <h2>Make A Transaction</h2>
+          <div className="transaction-form">
+            <div className="transaction-form__item">
+              <p>Please enter amount for your {this.state.transactionType}</p>
+            </div>
+            <div className="transaction-form__item">
+              <span>$</span><input onChange={this._updateInput.bind(this, "transactionAmount")} value={this.state.transactionAmount} placeholder="e.g 500"/>
+              <button onClick={this.handleTransaction.bind(this)} disabled={this._checkDisabled()}>Submit</button>
+            </div>
+            <div className="transaction-form__item">
+              <input type="checkBox" onChange={this._toggleTransactionType.bind(this)} checked={this.state.transactionType === 'withdrawal'}/>Withdrawal
+              <span className="instructions">Check box if your transaction is a withdrawal</span>
+            </div>
+          </div>
       </div>
     )
   }
