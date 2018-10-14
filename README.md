@@ -11,4 +11,4 @@ To run the app
 1. Clone this repo locally.
 2. Navigate to the root directory of the project on your local machine.
 3. Run `npm install` to install dependencies
-4. Assuming that ledger-api server is running (instructions for that setup are provided in the [weather-api](https://github.com/jstiehl/ledger-api) repo), you can run the app locally by running the `npm start` command in the root directory of this project.  Browser should open up automatically but if it doesn't you can navigate to `'http://localhost:3000` to launch the app in your browser.
+4. Assuming that ledger-api server is running (instructions for that setup are provided in the [ledger-api](https://github.com/jstiehl/ledger-api) repo), you can run the app locally by running the `npm start` command in the root directory of this project.  Browser should open up automatically but if it doesn't you can navigate to `'http://localhost:3000` to launch the app in your browser.
